@@ -28,12 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const CircleAvatar(
-                        radius: 22,
+                        radius: 28,
                         backgroundImage:
                             AssetImage('assets/images/profile.png'),
                       ),
                       IconButton(
                         onPressed: () {},
+                        iconSize: 60,
                         icon: SvgPicture.asset(
                           'assets/icons/notification.svg',
                         ),
@@ -41,15 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
                           "Explore Language",
                           style: TextStyle(
-                            fontSize: 16,
-                          ),
+                              fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         DropdownButton<String>(
                           iconEnabledColor: primaryColor,
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   language[index].title,
                                   style: const TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 18,
                                       color: Colors.white,
                                       fontWeight: FontWeight.w800),
                                   textAlign: TextAlign.left,
@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   'Total: ${language[index].title}+ Spekaers',
                                   style: const TextStyle(
-                                    fontSize: 10,
+                                    fontSize: 12,
                                     color: Colors.white,
                                   ),
                                   textAlign: TextAlign.left,
