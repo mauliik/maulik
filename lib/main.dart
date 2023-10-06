@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:maulik/screens/accountScreen.dart';
-import 'package:maulik/screens/exploreScreen.dart';
-import 'package:maulik/screens/homeScreen.dart';
-
-import 'screens/learnScreen.dart';
+import 'package:maulik/screens/account_screen.dart';
+import 'package:maulik/screens/explore_screen.dart';
+import 'package:maulik/screens/home_screen.dart';
+import 'package:maulik/screens/learn_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,21 +33,22 @@ class MyApp extends StatelessWidget {
         textTheme:
             GoogleFonts.latoTextTheme(), // Use Lato font for the text theme
       ),
-      home: MyBottomNavigationBar(screens),
+      home: MaulikBottomNavigationBar(screens),
     );
   }
 }
 
-class MyBottomNavigationBar extends StatefulWidget {
+class MaulikBottomNavigationBar extends StatefulWidget {
   final List<Widget> screens;
 
-  const MyBottomNavigationBar(this.screens, {super.key});
+  const MaulikBottomNavigationBar(this.screens, {super.key});
 
   @override
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
+  State<MaulikBottomNavigationBar> createState() =>
+      _MaulikBottomNavigationBarState();
 }
 
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+class _MaulikBottomNavigationBarState extends State<MaulikBottomNavigationBar> {
   int _currentIndex = 0;
 
   @override
@@ -71,28 +72,40 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/homeicon.svg',
-              color: _currentIndex == 0 ? primaryColor : Colors.black,
+              colorFilter: ColorFilter.mode(
+                _currentIndex == 0 ? primaryColor : Colors.black,
+                BlendMode.srcIn,
+              ),
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/explore.svg',
-              color: _currentIndex == 1 ? primaryColor : Colors.black,
+              colorFilter: ColorFilter.mode(
+                _currentIndex == 1 ? primaryColor : Colors.black,
+                BlendMode.srcIn,
+              ),
             ),
             label: 'Explore',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/learn.svg',
-              color: _currentIndex == 2 ? primaryColor : Colors.black,
+              colorFilter: ColorFilter.mode(
+                _currentIndex == 2 ? primaryColor : Colors.black,
+                BlendMode.srcIn,
+              ),
             ),
             label: 'Learn',
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/icons/account.svg',
-              color: _currentIndex == 3 ? primaryColor : Colors.black,
+              colorFilter: ColorFilter.mode(
+                _currentIndex == 3 ? primaryColor : Colors.black,
+                BlendMode.srcIn,
+              ),
             ),
             label: 'Account',
           ),
