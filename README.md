@@ -1,16 +1,16 @@
-# maulik
+# मौलिक
 
-A new Flutter project.
+Maulik is an app that helps people learn about listed indigeneous language along with the associated
+cultures and origing cirumstances.
 
-## Getting Started
+Once you select the language you would like to explore, you would be greeted with knowledge of various
+subject matters like literatures written in the langauge, digital media art forms like movies, songs,
+Television series etc that would help further raise awareness about the language.
 
-This project is a starting point for a Flutter application.
+We intend to add further languages down the road and you can help us in achieving this goal by
+contributing any help you could. or provide feedbacks to us regarding the experience within the app
+itself.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The best fun thing in the app is to mess around the explore menu and look at heatmap that shows 
+population distrubtion of native speakers of associated langauge. 
+You may also find hidden infos like sciptures of the languages and supposed place of origin pointed out.
