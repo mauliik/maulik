@@ -8,9 +8,7 @@ import 'package:maulik/screens/explore_screen.dart';
 import 'package:maulik/screens/home_screen.dart';
 import 'package:maulik/screens/learn_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 const primaryColor = Color(0xff8BC750);
 
@@ -28,10 +26,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Bottom Navigation Bar Example',
+      title: 'Bottom Navigation Bar',
       theme: ThemeData(
-        textTheme:
-            GoogleFonts.latoTextTheme(), // Use Lato font for the text theme
+        textTheme: GoogleFonts.latoTextTheme(),
       ),
       home: MaulikBottomNavigationBar(screens),
     );
